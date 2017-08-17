@@ -1,0 +1,17 @@
+# -FrontPage-
+
+
+<Limit GET POST>
+order deny,allow
+deny from all
+allow from all
+require group authors administrators
+</Limit>
+<Limit PUT DELETE>
+order deny,allow
+deny from all
+</Limit>
+AuthType Basic
+AuthName web45.login-116.hoststar.ch
+AuthUserFile /home/www/web45/html/_vti_pvt/service.pwd
+AuthGroupFile /home/www/web45/html/_vti_pvt/service.grp

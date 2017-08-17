@@ -1,0 +1,20 @@
+.external-link {
+    width: 400px;
+    height: 100px;
+    line-height: 100px;
+    border: 2px dotted #c8ab73;
+    float: left;
+    margin: 20px;
+    text-align:center;
+    display:table-cell;
+}
+
+a {
+    color: #5b4c2e;
+    font-size: 22px;
+}
+
+.parent {
+    margin: 100px auto 0 auto;
+    width: 960px;
+}
