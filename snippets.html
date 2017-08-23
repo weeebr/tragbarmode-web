@@ -10,13 +10,9 @@
 	}
 </style>
 
-<script>
-	function handleOnClick() {
-	    document.getElementById("one").selectAll();
-    }
-</script>
+
 <h2>#home > .inner</h2>
-<textarea id="one" onclick="handleOnClick()" style="height:120px">
+<textarea onclick="this.focus();this.select()" style="height:120px">
 <h2 style="font-weight: bold; color:#FF0000">Achtung, spezielle Sommeröffnungszeiten! Vom 20.-23. Juni jeweils verlängerter Mittag bis 15.00.</h2>
 <h2 style="color:#695b4a; text-align:center; font-size: 24px"><span style="font-weight: bold">Zusätzliche Öffnungszeiten im Dezember:</span><br />
 Sonntag, 11. und 18. Dezember, 12.00 bis 17.00 Uhr<br />
@@ -24,13 +20,13 @@ Montag, 12. und 19. Dezember, 14.00 bis 18.00 Uhr</h2>
 </textarea>
 
 <h2>#besuche-uns > .inner > besuche-uns-aside</h2>
-<textarea style="height:50px">
+<textarea onclick="this.focus();this.select()" style="height:50px">
 <h3 style="font-weight: bold; color:#FF0000">Achtung vom 20.-23. Juni:<br />
 Verlängerter Mittag bis 15.00</h3><br />
 </textarea>
 
 <h2>#besuche-uns > .inner > .besuche-uns-table</h2>
-<textarea style="height:210px">
+<textarea onclick="this.focus();this.select()" style="height:210px">
 <span style="color: #77766D;font-size: 14px">Über die Festtage haben wir wie folgt geöffnet:
 <table>
  <tr>
