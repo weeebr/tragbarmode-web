@@ -8,6 +8,7 @@
     "browser-sync": "^2.18.13",
     "eslint": "^4.6.1",
     "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.3.0",
     "imagemin-cli": "^3.0.0",
@@ -16,14 +17,15 @@
     "onchange": "^3.2.1",
     "parallelshell": "^3.0.1",
     "postcss-cli": "^4.1.0",
-    "uglify-js": "^3.0.28"
+    "uglify-js": "^3.0.28",
+    "uglifyjs": "^2.4.11"
   },
   "scripts": {
     "scss": "node-sass --output-style expanded --indent-type space --source-comments --indent-width 2 -o dist/css src/scss",
     "scssx": "node-sass --output-style compressed -o dist/css src/scss",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
     "lint": "eslint src/js",
-    "uglify": "if not exist \"dist\\js\" mkdir dist\\js && uglifyjs src/js/*.js -m -c -o dist/js/scripts.js",
+    "uglify": "uglifyjs src/js/*.js -m -c -o dist/js/scripts.js",
     "imagemin": "imagemin src/img/*.{png,jpg,gif} -o dist/img",
     "serve": "browser-sync start --server --files 'dist/css/*.css, dist/js/*.js'",
     "build:css": "npm run scss && npm run autoprefixer",
@@ -31,7 +33,7 @@
     "build:img": "npm run imagemin && npm run icons",
     "build:all": "npm run build:css && npm run build:js && npm run build:img",
     "watch:css": "onchange \"src/scss/*.scss\" -- npm run build:css",
-    "watch:js": "onchange \"src/scss/*.scss\" -- npm run build:js",
+    "watch:js": "onchange \"src/js/*.js\" -- npm run build:js",
     "watch:all": "npm-run-all -p watch:css watch:js serve",
     "postinstall": "npm run watch:all"
   },
