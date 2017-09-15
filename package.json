@@ -17,15 +17,14 @@
     "onchange": "^3.2.1",
     "parallelshell": "^3.0.1",
     "postcss-cli": "^4.1.0",
-    "uglify-js": "^3.0.28",
-    "uglifyjs": "^2.4.11"
+    "uglify-js": "^3.0.28"
   },
   "scripts": {
     "scss": "node-sass --output-style expanded --indent-type space --source-comments --indent-width 2 -o dist/css src/scss",
     "scssx": "node-sass --output-style compressed -o dist/css src/scss",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
     "lint": "eslint src/js",
-    "uglify": "uglifyjs src/js/*.js -m -c -o dist/js/scripts.js",
+    "uglify": "uglify-js src/js/*.js -m -c -o dist/js/scripts.js",
     "imagemin": "imagemin src/img/*.{png,jpg,gif} -o dist/img",
     "serve": "browser-sync start --server --files 'dist/css/*.css, dist/js/*.js'",
     "build:css": "npm run scss && npm run autoprefixer",
